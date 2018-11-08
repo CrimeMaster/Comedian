@@ -18,12 +18,12 @@ struct Books {
 
 int main( ) {
     // create an array of 5 book structs
-    int i, j = 0;
+    int i, input;
     char temp[100];
     struct Books book[3];
-    book[0].book_id = 456;
+    /*book[0].book_id = 456;
     book[1].book_id = 567;
-    book[2].book_id = 231;
+    book[2].book_id = 231;*/
     for(i = 0 ; i < 3 ; i++){
         printf("Enter no %d title name ", i+1);
         scanf("%[^\n]%*c", temp);
@@ -34,10 +34,9 @@ int main( ) {
         printf("Enter no %d subject ", i+1);
         scanf("%[^\n]%*c", temp);
         strcpy(book[i].subject, temp);
-       /* printf("Enter book id");
-        scanf("%d",j);
-        book[i].book_id = 23;*/
-        
+        printf("Enter book id");
+        scanf("%d",&input);
+        book[i].book_id = input;
     }
     
     for(i = 0 ; i < 3 ; i++){
@@ -49,3 +48,4 @@ int main( ) {
     
     return 0;
 }
+   
